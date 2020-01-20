@@ -14,5 +14,5 @@ power ups for speed
 if not first person, then make it multi layered, with elavators, and obstacles (moving levels)?
 
 Current status:
-created pacman (need nom nom animation tho), and one ghost (but I will be redoing it to add metalic, better curves, better coloring, etc)
-plans for the week: joyd stick controls of pacman, animated pacman in mobile form, redo ghosts, test charecters in mobile ar platform
+created pacman, 7 ghosts, and first pacman scene
+plans for the week: add background, walls, program ghost algorithm for scripts
