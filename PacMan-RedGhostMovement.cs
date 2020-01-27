@@ -11,6 +11,7 @@ public class RedMovement : MonoBehaviour
 {
     public GameObject pacman;
     public GameObject redGhost;
+    public GameObject wall;
 
     private pacmanStartPos = new Vector3(0.0f, 0.0f, 30.0f); //update when finalized
     private currentLevel; //get from GameStart class
@@ -36,14 +37,35 @@ public class RedMovement : MonoBehaviour
 
         for(i=0; i<4; i++){
             scatterTime = scatterTime - i;
-            Scatter()
+            Scatter();
         }
 
-        Chase()
+       public void Chase(chaseTime){
+           //define chaseTime and pacman positions
+       }
 
-        Scatter(scatterTime){
-            //need to find original scatter method
-            //https://gameinternals.com/understanding-pac-man-ghost-behavior
+        public void MoveRightTopCorner(){
+            upperCorner = new Vector3 (300f, 300f, 100f); // need to redfine after building wall
+            currentPosition = ghost.position(); //look for unity method for this
+            if (wall.position == (ghost.position + 2f)){
+                direction = currentPosition - previousPosition;
+                //look at unity directions, 
+                // from distance if 3right is less than 3 left distance go right
+                // reverse for up and down
+            }
+        }
+
+        public int Scatter(scatterTime){
+            //origanal scatter method has red to top right corner
+            //pink = left top  orange = bottom left    green = bottom right
+            
+            if (stopwatch.Elapsed < scatterTime){
+                previousPosition = ghost.position();
+                MoveRightTopCorner();
+            }
+            else{
+                Chase();
+            }
         }
     }
 
