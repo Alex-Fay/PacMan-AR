@@ -74,3 +74,5 @@ public class RedMovement : MonoBehaviour
     {
         
     }
+
+//next do chase method
