@@ -15,4 +15,4 @@ if not first person, then make it multi layered, with elavators, and obstacles (
 
 Current status:
 created pacman, 7 ghosts, and first pacman scene
-plans for the week: add background, walls, program ghost algorithm for scripts
+plans for the week: add background, walls, add Chase method, add Fear Mode (when pacman eats special pellets), first ghost tests
